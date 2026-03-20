@@ -1,4 +1,4 @@
-# 1000 Din Web App 🚀
+# NexCraft 🚀
 
 A full-stack MERN web application for web design, development, app creation, game development, and hardware repair services.
 
@@ -10,7 +10,7 @@ A full-stack MERN web application for web design, development, app creation, gam
 
 ## Project Structure
 ```
-1000-din-web-app/
+NexCraft/
 ├── client/          # React Frontend
 │   ├── public/
 │   └── src/
