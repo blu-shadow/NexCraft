@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e35"/>
+      <stop offset="100%" stop-color="#16162a"/>
+    </linearGradient>
+    <linearGradient id="avatarAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6c63ff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <clipPath id="circle">
+      <circle cx="60" cy="60" r="60"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="60" cy="60" r="60" fill="url(#avatarBg)"/>
+
+  <!-- Subtle pattern ring -->
+  <circle cx="60" cy="60" r="56" stroke="rgba(108,99,255,0.15)" stroke-width="1" fill="none"
+          stroke-dasharray="6 4"/>
+
+  <!-- Body / Shirt -->
+  <ellipse cx="60" cy="102" rx="34" ry="24" fill="url(#avatarAccent)" opacity="0.6"
+           clip-path="url(#circle)"/>
+
+  <!-- Head -->
+  <circle cx="60" cy="46" r="22" fill="url(#avatarAccent)" opacity="0.85"/>
+
+  <!-- Face highlight -->
+  <circle cx="54" cy="40" r="4" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Inner ring -->
+  <circle cx="60" cy="60" r="59" stroke="rgba(108,99,255,0.2)" stroke-width="1" fill="none"/>
+</svg>

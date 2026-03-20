@@ -1,0 +1,155 @@
+/* ═══════════════════════════════════════════════════════════
+               THEME — DARK / LIGHT MODE
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────
+   DARK THEME (Default)
+───────────────────────────────────────── */
+[data-theme="dark"],
+:root {
+  --clr-bg            : #0f0f1a;
+  --clr-bg-2          : #13132280;
+  --clr-bg-3          : #1e1e35;
+  --clr-surface       : #16162a;
+  --clr-surface-2     : #1a1a32;
+  --clr-border        : rgba(255,255,255,0.07);
+  --clr-border-hover  : rgba(108,99,255,0.35);
+  --clr-text          : #e8e8f0;
+  --clr-text-muted    : #8888aa;
+  --clr-text-subtle   : #555577;
+
+  /* Shadows */
+  --shadow-sm  : 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md  : 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-lg  : 0 20px 60px rgba(0,0,0,0.6);
+  --shadow-glow: 0 0 40px rgba(108,99,255,0.2);
+
+  /* Bottom nav */
+  --nav-bg     : rgba(13,13,26,0.95);
+  --nav-border : rgba(255,255,255,0.06);
+}
+
+/* ─────────────────────────────────────────
+   LIGHT THEME
+───────────────────────────────────────── */
+[data-theme="light"] {
+  --clr-bg            : #f2f2ff;
+  --clr-bg-2          : #ebebff;
+  --clr-bg-3          : #e0e0f8;
+  --clr-surface       : #ffffff;
+  --clr-surface-2     : #f8f8ff;
+  --clr-border        : rgba(0,0,0,0.07);
+  --clr-border-hover  : rgba(108,99,255,0.3);
+  --clr-text          : #1a1a2e;
+  --clr-text-muted    : #6666aa;
+  --clr-text-subtle   : #9999bb;
+
+  /* Shadows */
+  --shadow-sm  : 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md  : 0 8px 32px rgba(0,0,0,0.12);
+  --shadow-lg  : 0 20px 60px rgba(0,0,0,0.15);
+  --shadow-glow: 0 0 40px rgba(108,99,255,0.15);
+
+  /* Bottom nav */
+  --nav-bg     : rgba(255,255,255,0.95);
+  --nav-border : rgba(0,0,0,0.07);
+}
+
+/* Light mode — form inputs */
+[data-theme="light"] .form-input {
+  background  : var(--clr-bg-2);
+  color       : var(--clr-text);
+}
+
+/* Light mode — cards */
+[data-theme="light"] .card {
+  background  : var(--clr-surface);
+  box-shadow  : var(--shadow-sm);
+}
+
+/* Light mode — glass */
+[data-theme="light"] .glass {
+  background  : rgba(255,255,255,0.7);
+  border-color: var(--clr-border);
+}
+
+/* Light mode — skeleton */
+[data-theme="light"] .skeleton {
+  background  : linear-gradient(
+    90deg,
+    var(--clr-bg-2) 25%,
+    var(--clr-bg-3) 50%,
+    var(--clr-bg-2) 75%
+  );
+  background-size: 200% 100%;
+  animation   : shimmer 1.5s infinite;
+}
+
+/* ─────────────────────────────────────────
+   SMOOTH THEME TRANSITION
+───────────────────────────────────────── */
+html {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+body,
+.card,
+.form-input,
+.btn,
+header,
+footer,
+nav,
+aside,
+section,
+main {
+  transition: background-color 0.35s ease,
+              color 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+/* ─────────────────────────────────────────
+   ADMIN PANEL THEME
+───────────────────────────────────────── */
+.admin-layout {
+  --admin-sidebar-bg   : #0d0d1f;
+  --admin-sidebar-width: 260px;
+  --admin-topbar-height: 64px;
+  --admin-content-bg   : #0f0f1a;
+}
+
+[data-theme="light"] .admin-layout {
+  --admin-sidebar-bg  : #1a1a2e;
+  --admin-content-bg  : #f2f2ff;
+}
+
+/* ─────────────────────────────────────────
+   YOUTUBE PAGE THEME
+───────────────────────────────────────── */
+.youtube-page {
+  --yt-header-bg: linear-gradient(180deg, #0f0f1a 0%, transparent 100%);
+}
+
+[data-theme="light"] .youtube-page {
+  --yt-header-bg: linear-gradient(180deg, #f2f2ff 0%, transparent 100%);
+}
+
+/* ─────────────────────────────────────────
+   BLOG PAGE THEME
+───────────────────────────────────────── */
+.blog-page {
+  --blog-prose-max-width: 740px;
+}
+
+/* ─────────────────────────────────────────
+   MEDIA — Reduce motion
+───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration  : 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration : 0.01ms !important;
+  }
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f0f1a" />
+
+    <!-- Primary Meta -->
+    <title>1000 Din — Web & Tech Services</title>
+    <meta name="description" content="Professional web design, development, app making, game development, motherboard repair and more." />
+    <meta name="keywords" content="web design, web development, app development, game development, motherboard repair, chip level repair, Bangladesh" />
+    <meta name="author" content="1000 Din" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:title"       content="1000 Din — Web & Tech Services" />
+    <meta property="og:description" content="Professional web & tech services. Building the future, one day at a time." />
+    <meta property="og:image"       content="/og-image.png" />
+    <meta property="og:url"         content="https://1000din.com" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="1000 Din" />
+    <meta name="twitter:description" content="Professional web & tech services." />
+    <meta name="twitter:image"       content="/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon"             type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon"   href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Global CSS Variables & Reset -->
+    <style>
+      :root {
+        /* ── Brand Colors */
+        --clr-primary       : #6c63ff;
+        --clr-primary-dark  : #4f46e5;
+        --clr-primary-light : #a78bfa;
+        --clr-accent        : #f59e0b;
+        --clr-accent-2      : #10b981;
+
+        /* ── Neutral */
+        --clr-bg            : #0f0f1a;
+        --clr-bg-2          : #16162a;
+        --clr-bg-3          : #1e1e35;
+        --clr-surface       : #1a1a2e;
+        --clr-border        : rgba(255,255,255,0.08);
+        --clr-text          : #e8e8f0;
+        --clr-text-muted    : #8888aa;
+        --clr-text-subtle   : #5555778;
+
+        /* ── Light Theme */
+        --clr-bg-light      : #f8f8ff;
+        --clr-bg-2-light    : #efefff;
+        --clr-surface-light : #ffffff;
+        --clr-border-light  : rgba(0,0,0,0.08);
+        --clr-text-light    : #1a1a2e;
+        --clr-text-muted-light: #6666aa;
+
+        /* ── Typography */
+        --font-display      : 'Sora', sans-serif;
+        --font-body         : 'DM Sans', sans-serif;
+        --font-mono         : 'JetBrains Mono', monospace;
+
+        /* ── Spacing */
+        --space-xs  : 4px;
+        --space-sm  : 8px;
+        --space-md  : 16px;
+        --space-lg  : 24px;
+        --space-xl  : 40px;
+        --space-2xl : 64px;
+        --space-3xl : 96px;
+
+        /* ── Radius */
+        --radius-sm  : 6px;
+        --radius-md  : 12px;
+        --radius-lg  : 20px;
+        --radius-xl  : 32px;
+        --radius-full: 9999px;
+
+        /* ── Shadows */
+        --shadow-sm : 0 2px 8px rgba(0,0,0,0.15);
+        --shadow-md : 0 8px 32px rgba(0,0,0,0.25);
+        --shadow-lg : 0 20px 60px rgba(0,0,0,0.4);
+        --shadow-glow: 0 0 40px rgba(108,99,255,0.25);
+
+        /* ── Transitions */
+        --transition-fast  : 150ms ease;
+        --transition-base  : 250ms ease;
+        --transition-slow  : 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        /* ── Bottom Nav Height */
+        --bottom-nav-height: 64px;
+      }
+
+      /* ── Light mode override */
+      [data-theme="light"] {
+        --clr-bg      : var(--clr-bg-light);
+        --clr-bg-2    : var(--clr-bg-2-light);
+        --clr-surface : var(--clr-surface-light);
+        --clr-border  : var(--clr-border-light);
+        --clr-text     : var(--clr-text-light);
+        --clr-text-muted: var(--clr-text-muted-light);
+        --shadow-md   : 0 8px 32px rgba(0,0,0,0.1);
+        --shadow-lg   : 0 20px 60px rgba(0,0,0,0.15);
+      }
+
+      /* ── Reset */
+      *, *::before, *::after {
+        margin       : 0;
+        padding      : 0;
+        box-sizing   : border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size      : 16px;
+      }
+
+      body {
+        font-family     : var(--font-body);
+        background-color: var(--clr-bg);
+        color           : var(--clr-text);
+        line-height     : 1.6;
+        min-height      : 100vh;
+        overflow-x      : hidden;
+        transition      : background-color var(--transition-slow),
+                          color var(--transition-slow);
+        /* Space for bottom navigation */
+        padding-bottom  : var(--bottom-nav-height);
+      }
+
+      /* ── Scrollbar */
+      ::-webkit-scrollbar       { width: 6px; }
+      ::-webkit-scrollbar-track { background: var(--clr-bg-2); }
+      ::-webkit-scrollbar-thumb { background: var(--clr-primary); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--clr-primary-light); }
+
+      /* ── Selection */
+      ::selection {
+        background: rgba(108,99,255,0.3);
+        color      : var(--clr-text);
+      }
+
+      /* ── Focus */
+      :focus-visible {
+        outline       : 2px solid var(--clr-primary);
+        outline-offset: 3px;
+        border-radius : var(--radius-sm);
+      }
+
+      /* ── Typography defaults */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
+        line-height: 1.2;
+        font-weight: 700;
+        color      : var(--clr-text);
+      }
+
+      a {
+        color          : var(--clr-primary-light);
+        text-decoration: none;
+        transition     : color var(--transition-fast);
+      }
+      a:hover { color: var(--clr-primary); }
+
+      img, video {
+        max-width : 100%;
+        height    : auto;
+        display   : block;
+      }
+
+      button {
+        cursor     : pointer;
+        font-family: var(--font-body);
+        border     : none;
+        background : none;
+      }
+
+      input, textarea, select {
+        font-family: var(--font-body);
+        font-size  : 1rem;
+      }
+
+      code, pre {
+        font-family: var(--font-mono);
+      }
+
+      /* ── Utility classes */
+      .container {
+        width    : 100%;
+        max-width: 1200px;
+        margin   : 0 auto;
+        padding  : 0 var(--space-md);
+      }
+
+      .sr-only {
+        position : absolute;
+        width    : 1px;
+        height   : 1px;
+        padding  : 0;
+        margin   : -1px;
+        overflow : hidden;
+        clip     : rect(0, 0, 0, 0);
+        border   : 0;
+      }
+
+      /* ── Page transition animation */
+      #root {
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0);   }
+      }
+
+      /* ── Shimmer / skeleton loading */
+      @keyframes shimmer {
+        0%   { background-position: -200% 0; }
+        100% { background-position:  200% 0; }
+      }
+
+      .skeleton {
+        background: linear-gradient(
+          90deg,
+          var(--clr-bg-2) 25%,
+          var(--clr-bg-3) 50%,
+          var(--clr-bg-2) 75%
+        );
+        background-size: 200% 100%;
+        animation      : shimmer 1.5s infinite;
+        border-radius  : var(--radius-sm);
+      }
+
+      /* ── Glassmorphism utility */
+      .glass {
+        background : rgba(255,255,255,0.04);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border     : 1px solid var(--clr-border);
+      }
+
+      /* ── Glow effect */
+      .glow {
+        box-shadow: var(--shadow-glow);
+      }
+
+      /* ── Gradient text */
+      .gradient-text {
+        background     : linear-gradient(135deg, var(--clr-primary-light), var(--clr-accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
